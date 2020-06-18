@@ -23,6 +23,6 @@ mongoose.connect("mongodb://root:Jh343979a!@ds051523.mlab.com:51523/heroku_t6zqq
 // routes
 app.use(require("./routes/api.js"));
 
-app.listen(PORT, () => {
+app.listen(process.env.PORT || 5000, () => {
   console.log(`App running on port ${PORT}!`);
 });
